@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mreana Amanoeel</title>
+<style>
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #2F4F4F;
+  color: #ffffff;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #00CED1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #00CED1;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px #000;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.column {
+  width: 45%;
+  min-width: 250px;
+  color: #f0f0f0;
+  height: auto;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Styled Image */
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.styled-img {
+  filter: grayscale(50%) contrast(120%);
+  border-radius: 50%;
+  width: 200px;
+}
+
+/* Table */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 2px solid #00CED1;
+  padding: 10px;
+}
+
+th {
+  background-color: #20B2AA;
+}
+
+/* Overlay Image Text */
+.image-text-section {
+  position: relative;
+}
+
+.overlay-img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+/* Fade Overlay */
+.fade-container {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.fade-container img {
+  width: 100%;
+  display: block;
+}
+
+.fade-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 206, 209, 0.7);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-container:hover .fade-text {
+  opacity: 1;
+}
+
+/* Paragraph Hover */
+.hover-text {
+  transition: color 0.3s ease;
+}
+
+.hover-text:hover {
+  color: #00CED1;
+  font-weight: bold;
+}
+
+/* Video Text Overlay */
+.video-text-overlay {
+  position: relative;
+}
+
+.video-text-overlay video {
+  width: 100%;
+  height: auto;
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #00CED1;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#video">Video</a>
+  </nav>
+
+  <!-- Hero Section with Video -->
+  <section id="home" class="hero-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2022/02/11/107425-678258632_tiny.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-text">Hi, I'm Mreana Amanoeel</div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="two-column">
+      <div class="column">
+        <p>Hello! I'm a student passionate about web development. I love creating clean, user-focused experiences.</p>
+      </div>
+      <div class="column">
+        <img src="https://cdn.pixabay.com/photo/2015/05/31/15/14/woman-792162_1280.jpg" alt="Mreana" class="profile-img"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Table -->
+  <section id="skills" class="section">
+    <h2>My Skills</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Good</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>None</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Text over Image -->
+  <section class="section image-text-section">
+    <img src="https://cdn.pixabay.com/photo/2020/02/11/19/56/laptop-4840790_1280.jpg" alt="Overlay" class="overlay-img"/>
+    <div class="overlay-text">Creative. Clean. Cool.</div>
+  </section>
+
+  <!-- Image with Filter and Rounded -->
+  <section class="section">
+    <h2>Styled Photo</h2>
+    <div class="img-wrapper">
+      <img src="https://cdn.pixabay.com/photo/2025/06/27/16/16/woman-9684174_1280.png" alt="Mreana Styled" class="styled-img"/>
+    </div>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="section">
+    <h2>Hover Image Fade</h2>
+    <div class="fade-container">
+      <img src="https://cdn.pixabay.com/photo/2025/06/27/16/16/woman-9684174_1280.png" alt="Fade Image"/>
+      <div class="fade-text">Hover Me!</div>
+    </div>
+  </section>
+
+  <!-- Video with Text Overlay -->
+  <section id="video" class="section video-text-overlay">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2016/05/12/3174-166338976_tiny.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay-text">Always Learning.</div>
+  </section>
+
+  <!-- Paragraph with Hover -->
+  <section class="section">
+    <p class="hover-text">Hover over this paragraph to see the effect.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mreana Amanoeel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
